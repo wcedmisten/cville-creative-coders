@@ -14,19 +14,19 @@ p {
     padding: 10px;
 }
 
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
     .container {
         width: 90%;
     }
- }
+}
 
- /* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .container {
         width: 550px;
     }
-} 
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -54,7 +54,7 @@ a {
 }
 
 .logo {
-    padding-right: 200px;
+    padding-right: 120px;
 }
 
 .nav {
@@ -67,7 +67,7 @@ a {
     padding-top: 10px;
 }
 
-.topnav a {
+.navLink {
     float: left;
     color: #f2f2f2;
     text-align: center;
@@ -76,11 +76,11 @@ a {
     font-size: 24px;
 }
 
-.topnav a:hover {
+.navLink:hover {
     color: rgb(227, 55, 198);
 }
 
-.topnav a.active {
+.active {
     color: rgb(227, 55, 198);
     font-weight: 800;
 }
@@ -91,4 +91,56 @@ a {
     font-family: montserrat, sans-serif;
     margin-top: 60px;
     margin-bottom: 60px;
+}
+
+
+.signupButton {
+    align-items: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: radial-gradient(farthest-corner at 100% 0, #e21ee9 0, #5a54c6 100%);
+    border-radius: 12px;
+    border-width: 0;
+    box-sizing: border-box;
+    /* color: #fff; */
+    cursor: pointer;
+    display: inline-flex;
+    height: 60px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    margin-left: 16px;
+    padding-left: 22px;
+    padding-right: 22px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 22px;
+    font-family: montserrat, sans-serif;
+    font-weight: 600
+}
+
+.signupButton:hover {
+    transform: translateY(-4px);
+    color: white;
+    background-color: white;
+}
+
+.signupButton:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.signupButton:active {
+    text-decoration: none;
+    color: white;
 }
