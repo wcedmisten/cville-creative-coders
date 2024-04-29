@@ -87,7 +87,7 @@ a {
 #title {
     font-size: 50px;
     color: #f2f2f2;
-    font-family: montserrat;
+    font-family: montserrat, sans-serif;
     margin-top: 60px;
     margin-bottom: 60px;
 }
