@@ -1,3 +1,17 @@
+:root {
+    /* sizes */
+    /* Extra small devices (phones, 600px and down) */
+    --xs-width: 600px;
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    --sm-width: 601px;
+    /* Medium devices (landscape tablets, 768px and up) */
+    --md-width: 768px;
+    /* Large devices (laptops/desktops, 992px and up) */
+    --lg-width: 992px;
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    --xl-width: 1200px;
+}
+
 p {
     color: #f2f2f2;
     font-size: 20px;
@@ -14,36 +28,32 @@ p {
     padding: 10px;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: var(--xs-width)) {
     .container {
-        width: 90%;
+        width: 95%;
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: var(--sm-width)) {
     .container {
-        width: 550px;
+        width: 95%;
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: var(--md-width)) {
     .container {
-        width: 700px;
+        width: 95%;
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: var(--lg-width)) {
     .container {
-        width: 900px;
+        width: 970px;
     }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: var(--xl-width)) {
     .container {
         width: 1100px;
     }
@@ -53,94 +63,10 @@ a {
     color: #0db9ee
 }
 
-.logo {
-    padding-right: 120px;
-}
-
-.nav {
-    margin-top: 10px;
-    display: flex;
-}
-
-.topnav {
-    overflow: hidden;
-    padding-top: 10px;
-}
-
-.navLink {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-.navLink:hover {
-    color: rgb(227, 55, 198);
-}
-
-.active {
-    color: rgb(227, 55, 198);
-    font-weight: 800;
-}
-
 #title {
     font-size: 50px;
     color: #f2f2f2;
     font-family: montserrat, sans-serif;
     margin-top: 60px;
     margin-bottom: 60px;
-}
-
-
-.signupButton {
-    align-items: center;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: radial-gradient(farthest-corner at 100% 0, #e21ee9 0, #5a54c6 100%);
-    border-radius: 12px;
-    border-width: 0;
-    box-sizing: border-box;
-    /* color: #fff; */
-    cursor: pointer;
-    display: inline-flex;
-    height: 60px;
-    justify-content: center;
-    line-height: 1;
-    list-style: none;
-    overflow: hidden;
-    margin-left: 16px;
-    padding-left: 22px;
-    padding-right: 22px;
-    position: relative;
-    text-align: left;
-    text-decoration: none;
-    transition: box-shadow .15s, transform .15s;
-    -moz-user-select: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    will-change: box-shadow, transform;
-    font-size: 22px;
-    font-family: montserrat, sans-serif;
-    font-weight: 600
-}
-
-.signupButton:hover {
-    transform: translateY(-4px);
-    color: white;
-    background-color: white;
-}
-
-.signupButton:visited {
-    text-decoration: none;
-    color: white;
-}
-
-.signupButton:active {
-    text-decoration: none;
-    color: white;
 }
