@@ -1,5 +1,10 @@
+html {
+    height: 100vh;
+}
+
 body {
     margin: 0;
+    height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #333;
 }
@@ -8,4 +13,123 @@ body {
     color: #f2f2f2;
     font-size: 24px;
     font-family: montserrat, sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .description {
+        font-size: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.wrapper {
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+}
+
+.countdownSection {
+    background-color: #eadaea;
+    flex-grow: 1;
+}
+
+.timerTitle {
+    padding-top: 20px;
+    font-size: 40px;
+    font-family: montserrat, sans-serif;
+    color:#181818
+}
+
+@media only screen and (max-width: 600px) {
+    .timerTitle {
+        font-size: 24px
+    }
+}
+
+.meetupDate {
+    font-size: 36px;
+    font-family: montserrat, sans-serif;
+    color:#181818
+}
+
+@media only screen and (max-width: 600px) {
+    .meetupDate {
+        font-size: 20px
+    }
+}
+
+
+
+.tickWrapper {
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.tick {
+    font-size: 1rem;
+    white-space: nowrap;
+    font-family: arial, sans-serif;
+}
+
+.tick-flip,
+.tick-text-inline {
+    font-size: 2.5em;
+}
+
+.tick-label {
+    margin-top: 1em;
+    font-size: 1em;
+
+    font-family: montserrat, sans-serif;
+
+    color: #181818;
+}
+
+.tick-char {
+    width: 1.5em;
+}
+
+.tick-text {
+    color: #181818;
+}
+
+.tick-text-inline {
+    display: inline-block;
+    text-align: center;
+    min-width: 1em;
+}
+
+.tick-text-inline+.tick-text-inline {
+    margin-left: -.325em;
+}
+
+.tick-group {
+    margin: 0 .5em;
+    text-align: center;
+}
+
+.tick-text-inline {
+    color: #fefefe !important;
+}
+
+.tick-flip-panel {
+    color: #f2f2f2 !important;
+}
+
+.tick-flip-panel-text-wrapper {
+    line-height: 1.45 !important;
+}
+
+.tick-flip-panel {
+    background-color: #3e3c3e !important;
+}
+
+.tick-flip {
+    border-radius: 0.12em !important;
+}
+
+.tick-credits {
+    display: none;
 }

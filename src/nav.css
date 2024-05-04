@@ -16,6 +16,10 @@
     display: flex;
 }
 
+header {
+    background-color: #333;
+}
+
 .desktopNavBar {
     /* overflow: hidden; */
     display: flex;
