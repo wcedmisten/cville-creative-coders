@@ -31,10 +31,13 @@ body {
 
 .countdownSection {
     background-color: #eadaea;
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    padding-bottom: 20px;
 }
 
 .timerTitle {
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 20px;
     font-size: 40px;
     font-family: montserrat, sans-serif;
@@ -50,12 +53,14 @@ body {
 .meetupDate {
     font-size: 36px;
     font-family: montserrat, sans-serif;
-    color:#181818
+    color:#181818;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 @media only screen and (max-width: 600px) {
     .meetupDate {
-        font-size: 20px
+        font-size: 18px
     }
 }
 
@@ -132,4 +137,64 @@ body {
 
 .tick-credits {
     display: none;
+}
+
+.locationSection {
+    background-color: #181818;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-top: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    .locationSection {
+        /* only use one column on mobile */
+        grid-template-columns: 1fr;
+    }
+}
+  
+
+#map {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: clamp(200px, 40vw, 600px);
+    width: clamp(200px, 40vw, 600px);
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.mapWrapper {
+    display:flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #map {
+        height: 90vw;
+        width: 90vw;
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+.locationDescriptionWrapper {
+    display:flex;
+    justify-content: center;
+}
+
+.locationDescription {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 40px;
+    margin: 20px;
+    color:#eadaea;
+
+    font-size: 26px;
+}
+
+@media only screen and (max-width: 600px) {
+    .locationDescription {
+        padding: 0px
+    }
 }

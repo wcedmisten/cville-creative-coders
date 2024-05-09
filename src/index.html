@@ -16,6 +16,10 @@
 
     <link href="https://unpkg.com/@pqina/flip/dist/flip.min.css" rel="stylesheet">
 
+    <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
@@ -115,6 +119,24 @@
                 <p>Time's up</p>
             </div>
         </section>
+
+        <section class="locationSection">
+            <div class="locationDescriptionWrapper">
+                <div class="locationDescription">
+                    <p class="description">We usually meet at the <a class="link"
+                            href="https://jmrl.org/central">Central Library</a>
+                        in Charlottesville, Virginia in the Jefferson room.</p>
+
+                    <p class="description">To get to the conference rooms, find the elevator at the back wall of the
+                        building and
+                        go up to the third floor. Once you exit the elevator, the Jefferson room is down the hall and on
+                        the right.</p>
+                </div>
+            </div>
+            <div class="mapWrapper">
+                <div id="map"></div>
+            </div>
+        </section>
     </div>
 
 
@@ -174,6 +196,30 @@
                 // document.querySelector('.tick-onended-message').style.display = '';
             };
         }
+    </script>
+
+    <script>
+        const map = new maplibregl.Map({
+            container: 'map',
+            minZoom: 7,
+            zoom: 14,
+            center: [-78.4799384, 38.0313533],
+            style: "/map-style.json"
+        });
+
+        let marker = new maplibregl.Marker()
+            .setLngLat([-78.4799384, 38.0313533])
+            .addTo(map);
+
+        map.on('load', function () {
+            map.resize();
+        });
+
+        // disable map rotation using right click + drag
+        map.dragRotate.disable();
+
+        // disable map rotation using touch rotation gesture
+        map.touchZoomRotate.disableRotation();
     </script>
 
     <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
