@@ -127,6 +127,11 @@
                             href="https://jmrl.org/central">Central Library</a>
                         in Charlottesville, Virginia in the Jefferson room.</p>
 
+                    <p class="description">The address is 
+                        <a class="link"
+                        href="http://maps.apple.com/?q=201 E. Market Street Charlottesville, VA 22902">201 E. Market Street Charlottesville, VA 22902</a>.
+                    </p>
+
                     <p class="description">To get to the conference rooms, find the elevator at the back wall of the
                         building and
                         go up to the third floor. Once you exit the elevator, the Jefferson room is down the hall and on
@@ -207,7 +212,7 @@
             style: "/map-style.json"
         });
 
-        let marker = new maplibregl.Marker()
+        let marker = new maplibregl.Marker({ "color": "#E337C6" })
             .setLngLat([-78.4799384, 38.0313533])
             .addTo(map);
 
