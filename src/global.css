@@ -59,7 +59,8 @@ p {
 }
 
 .link {
-    color: #0db9ee
+    color: #0db9ee;
+    word-break: break-word;
 }
 
 #title {

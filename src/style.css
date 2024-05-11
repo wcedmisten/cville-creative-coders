@@ -29,6 +29,10 @@ body {
     display: flex;
 }
 
+.descriptionSection {
+    padding-bottom: 40px;
+}
+
 .countdownSection {
     background-color: #d8e5f5;
     /* flex-grow: 1; */
