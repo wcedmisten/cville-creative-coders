@@ -9,20 +9,6 @@ body {
     background-color: #333;
 }
 
-.description {
-    color: #f2f2f2;
-    font-size: 24px;
-    font-family: montserrat, sans-serif;
-}
-
-@media only screen and (max-width: 600px) {
-    .description {
-        font-size: 18px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
 .wrapper {
     flex-direction: column;
     height: 100%;
