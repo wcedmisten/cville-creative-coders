@@ -15,10 +15,10 @@
     <link rel="preload" href="/nav.js" as="script">
     <script defer src="/nav.js"></script>
 
-    <link href="https://unpkg.com/@pqina/flip/dist/flip.min.css" rel="stylesheet">
-    <!-- <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet"> -->
-
     <!-- defer this CSS -->
+    <link rel="preload" href="https://unpkg.com/@pqina/flip/dist/flip.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/@pqina/flip/dist/flip.min.css"></noscript>
+
     <link rel="preload" href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css"></noscript>
 
