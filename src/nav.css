@@ -1,3 +1,20 @@
+:root {
+    /* sizes */
+    /* Extra small devices (phones, 600px and down) */
+    --xs-width: 600px;
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    --sm-width: 601px;
+    /* Medium devices (landscape tablets, 768px and up) */
+    --md-width: 768px;
+    /* Large devices (laptops/desktops, 992px and up) */
+    --lg-width: 992px;
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    --xl-width: 1200px;
+
+    --accent: #e337c6;
+    --text-light: #f2f2f2;
+}
+
 .logo {
     width: clamp(200px, 30vw, 380px);
     height: clamp(30px, 10vw, 50px);
