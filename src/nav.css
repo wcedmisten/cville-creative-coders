@@ -45,7 +45,7 @@ header {
 }
 
 .navLink:hover {
-    color: "#E337C6";
+    color: var(--accent);
 }
 
 .mobileNavLink {
@@ -59,7 +59,7 @@ header {
 }
 
 .active {
-    color: "#E337C6";
+    color: var(--accent);
     font-weight: 800;
 }
 
