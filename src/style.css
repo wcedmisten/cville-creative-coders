@@ -19,6 +19,77 @@ body {
     padding-bottom: 40px;
 }
 
+.heroWrapper {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .heroWrapper {
+        flex-direction: column;
+    }
+}
+
+
+.heroImg {
+    border-radius: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    .heroImg {
+        margin-top: 30px;
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .heroImg {
+        margin-top: 30px;
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .heroImg {
+        margin-top: 30px;
+        width: 400px;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .heroImg {
+        margin-top: 30px;
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .heroImg {
+        margin-top: 30px;
+        width: 500px;
+    }
+}
+
+.descriptionWrapper {
+    width: 1000px;
+    padding-right: 80px;
+}
+
+@media only screen and (max-width: 600px) {
+    .descriptionWrapper {
+        width: 350px;
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .descriptionWrapper {
+        width: 580px;
+        padding-right: 0px;
+    }
+}
+
 .countdownSection {
     background-color: #d8e5f5;
     /* flex-grow: 1; */
@@ -132,41 +203,50 @@ body {
 
 .locationSection {
     background-color: #181818;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-around;
     gap: 10px;
     padding-top: 40px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     .locationSection {
-        /* only use one column on mobile */
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+}
+
+.locationTitle {
+    padding-top: 20px;
+    font-size: 60px;
+    font-family: montserrat, sans-serif;
+    color:var(--text-light)
+}
+
+@media only screen and (max-width: 600px) {
+    .locationTitle {
+        font-size: 30px;
+        padding-top: 0px;
+        padding-left: 20px;
     }
 }
   
 
 #map {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: clamp(200px, 40vw, 600px);
-    width: clamp(200px, 40vw, 600px);
-    grid-column: 2;
-    grid-row: 1;
+    margin: 20px;
+    height: 500px;
+    width: 500px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #map {
+        height: 90vw;
+        width: 90vw;
+    }
 }
 
 .mapWrapper {
     display:flex;
     justify-content: center;
-}
-
-@media only screen and (max-width: 600px) {
-    #map {
-        height: 90vw;
-        width: 90vw;
-        grid-column: 1;
-        grid-row: 2;
-    }
 }
 
 .locationDescriptionWrapper {
@@ -175,17 +255,17 @@ body {
 }
 
 .locationDescription {
-    grid-column: 1;
-    grid-row: 1;
     padding: 40px;
     margin: 20px;
     color:#eadaea;
 
     font-size: 26px;
+
+    max-width: 800px;
 }
 
 @media only screen and (max-width: 600px) {
     .locationDescription {
-        padding: 0px
+        padding: 0px;
     }
 }

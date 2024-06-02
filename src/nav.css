@@ -17,7 +17,6 @@
 
 .logo {
     width: clamp(200px, 30vw, 380px);
-    height: clamp(30px, 10vw, 50px);
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -31,6 +30,7 @@
 .nav {
     margin-top: 10px;
     display: flex;
+    align-items: center;
 }
 
 header {

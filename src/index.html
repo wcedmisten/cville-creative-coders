@@ -82,6 +82,7 @@
             <div class="container">
                 <h1 id="title">C&rsquo;ville Creative Coders</h1>
 
+                <div class="heroWrapper">
                 <div class="descriptionWrapper">
                     <p class="description">C&rsquo;ville Creative Coders is a meetup for
                         programmers, artists, and creatives in Charlottesville who are
@@ -103,6 +104,16 @@
                         Whether you're a seasoned developer or a beginner programmer,
                         our group welcomes you.
                     </p>
+                </div>
+                <picture>
+                    <!-- Mobile Image -->
+                    <source media="(max-width: 600px)" srcset="/images/hero-m.jpg">
+                    <!-- Desktop Image -->
+                    <source media="(min-width: 601px)" srcset="/images/hero.jpg">
+                    <!-- Fallback Image -->
+                    <img class="heroImg" aria-hidden="true" src="/images/hero.jpg"
+                        alt="An image of a person's wrist in front of a monitor showing code.">
+                </picture>
                 </div>
 
             </div>
@@ -137,6 +148,7 @@
             <script defer src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
             <div class="locationDescriptionWrapper">
                 <div class="locationDescription">
+                    <h2 class="locationTitle">Location</h2>
                     <p class="description">We usually meet at the <a class="link"
                             href="https://jmrl.org/central">Central Library</a>
                         in Charlottesville, Virginia in the Jefferson room.</p>
