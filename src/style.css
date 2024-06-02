@@ -72,20 +72,17 @@ body {
 }
 
 .descriptionWrapper {
-    width: 1000px;
     padding-right: 80px;
 }
 
 @media only screen and (max-width: 600px) {
     .descriptionWrapper {
-        width: 350px;
         padding-right: 0px;
     }
 }
 
 @media only screen and (max-width: 1000px) {
     .descriptionWrapper {
-        width: 580px;
         padding-right: 0px;
     }
 }
