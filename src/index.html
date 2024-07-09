@@ -4,7 +4,7 @@
 <head>
     <title>Cville Creative Coders</title>
     <meta charset="UTF-8">
-    
+
     <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
 
@@ -18,11 +18,17 @@
     <script defer src="/nav.js"></script>
 
     <!-- defer this CSS -->
-    <link rel="preload" href="https://unpkg.com/@pqina/flip/dist/flip.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://unpkg.com/@pqina/flip/dist/flip.min.css"></noscript>
+    <link rel="preload" href="https://unpkg.com/@pqina/flip/dist/flip.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://unpkg.com/@pqina/flip/dist/flip.min.css">
+    </noscript>
 
-    <link rel="preload" href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css"></noscript>
+    <link rel="preload" href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css">
+    </noscript>
 
 
     <!-- favicon -->
@@ -83,37 +89,37 @@
                 <h1 id="title">C&rsquo;ville Creative Coders</h1>
 
                 <div class="heroWrapper">
-                <div class="descriptionWrapper">
-                    <p class="description">C&rsquo;ville Creative Coders is a meetup for
-                        programmers, artists, and creatives in Charlottesville who are
-                        passionate about their projects.
-                        Our meetup group provides a supportive space for individuals of
-                        all experience levels to showcase their creative and technical projects.
-                        Whether it&rsquo;s a video game, a website, a piece of hardware, an animation,
-                        or a graph, we&rsquo;d love to see it!</p>
+                    <div class="descriptionWrapper">
+                        <p class="description">C&rsquo;ville Creative Coders is a meetup for
+                            programmers, artists, and creatives in Charlottesville who are
+                            passionate about their projects.
+                            Our meetup group provides a supportive space for individuals of
+                            all experience levels to showcase their creative and technical projects.
+                            Whether it&rsquo;s a video game, a website, a piece of hardware, an animation,
+                            or a graph, we&rsquo;d love to see it!</p>
 
-                    <p class="description">
-                        Through our monthly meetup, members have the opportunity to present
-                        their projects, share insights, and receive constructive feedback from fellow
-                        creators. Our community encourages sharing things before they're “ready”,
-                        because an artist&rsquo;s work is never done.
-                    </p>
+                        <p class="description">
+                            Through our monthly meetup, members have the opportunity to present
+                            their projects, share insights, and receive constructive feedback from fellow
+                            creators. Our community encourages sharing things before they're “ready”,
+                            because an artist&rsquo;s work is never done.
+                        </p>
 
-                    <p class="description">
-                        If you built something that you think is cool, come share it with us!
-                        Whether you're a seasoned developer or a beginner programmer,
-                        our group welcomes you.
-                    </p>
-                </div>
-                <picture>
-                    <!-- Mobile Image -->
-                    <source media="(max-width: 600px)" srcset="/images/hero-m.jpg">
-                    <!-- Desktop Image -->
-                    <source media="(min-width: 601px)" srcset="/images/hero.jpg">
-                    <!-- Fallback Image -->
-                    <img class="heroImg" aria-hidden="true" src="/images/hero.jpg"
-                        alt="An image of a person's wrist in front of a monitor showing code.">
-                </picture>
+                        <p class="description">
+                            If you built something that you think is cool, come share it with us!
+                            Whether you're a seasoned developer or a beginner programmer,
+                            our group welcomes you.
+                        </p>
+                    </div>
+                    <picture>
+                        <!-- Mobile Image -->
+                        <source media="(max-width: 600px)" srcset="/images/hero-m.jpg">
+                        <!-- Desktop Image -->
+                        <source media="(min-width: 601px)" srcset="/images/hero.jpg">
+                        <!-- Fallback Image -->
+                        <img class="heroImg" aria-hidden="true" src="/images/hero.jpg"
+                            alt="An image of a person's wrist in front of a monitor showing code.">
+                    </picture>
                 </div>
 
             </div>
@@ -122,7 +128,7 @@
             <script defer load="lazy" src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
             <div class="container">
                 <h2 class="timerTitle">Next Meetup</h2>
-                <h3 class="meetupDate">Tuesday, July 23, 2024 at 7:00 PM</h3>
+                <h3 id="meetupDate" class="meetupDate">placeholder date</h3>
                 <div class="tickWrapper">
                     <div class="tick" data-did-init="handleTickInit">
                         <div data-repeat="true" data-layout="horizontal fit"
@@ -174,6 +180,16 @@
 
 
     <script>
+        const nextDate = '2024-07-23T19:00:00-04:00';
+
+        const formatted = new Intl.DateTimeFormat('en-US', {
+            dateStyle: 'full',
+            timeStyle: 'short',
+            timeZone: 'America/New_York',
+            hour12: true,
+        }).format(new Date(nextDate))
+
+        document.getElementById('meetupDate').innerHTML = formatted;
         function handleTickInit(tick) {
 
             // uncomment to set labels to different language
@@ -211,7 +227,7 @@
             // '2018-01-15T10:00:00+01:00'  to count down to the 15th of January 2018 at 10 o'clock in timezone GMT+1
 
             // create the countdown counter
-            var counter = Tick.count.down('2024-07-23T19:00:00-04:00');
+            var counter = Tick.count.down(nextDate);
 
             counter.onupdate = function (value) {
                 tick.value = value;
